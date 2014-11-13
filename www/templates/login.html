@@ -1,0 +1,30 @@
+<div class="modal">
+  <ion-header-bar>
+    <h1 class="title">API KEY</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doLogin()">
+      <div ng-if="loginMessage" class="login-message" ng-class="{assertive: loginMessage.error, balanced: loginMessage.success}">{{loginMessage.message}}</div>
+
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">API Key</span>
+          <input type="password" ng-model="loginData.apiKey">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Save</button>
+        </label>
+      </div>
+
+      <p class="padding">You can go to <a href="http://extras.envato.com/api/" target="_blank">http://extras.envato.com/api/</a> to read more about Envato Marketplace API.</p>
+    </form>
+  </ion-content>
+</div>
+
