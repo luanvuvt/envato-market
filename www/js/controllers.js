@@ -60,19 +60,7 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('RecentSalesCtrl', function($scope, $http, $q, $ionicLoading, $ionicPopover) {
-  $ionicPopover.fromTemplateUrl('components/popover.html', {
-    scope: $scope,
-  }).then(function(popover) {
-    $scope.popover = popover;
-  });
-
-  $scope.showSaleDetail = function (sale) {
-    console.log($scope.popover);
-
-    $scope.popover.show();
-  };
-
+.controller('RecentSalesCtrl', function($scope, $http, $q, $ionicLoading) {
   $scope.show = function() {
       $ionicLoading.show({
         template: 'Loading...'

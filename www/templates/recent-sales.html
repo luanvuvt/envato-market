@@ -3,12 +3,12 @@
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-content class="has-header">
-    <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()"></ion-refresher>
+    <ion-refresher pulling-text="Pull to refresh..."on-refresh="doRefresh()"></ion-refresher>
 
     <div class="padding" ng-if="messageData">{{messageData.message}}</div>
 
     <ion-list>
-      <ion-item ng-repeat="recentSale in recentSales" ng-click="showSaleDetail(recentSale);">
+      <ion-item ng-repeat="recentSale in recentSales">
         <div class="row">
           <div class="col">{{recentSale.item | simplifyThemeName}}</div><div class="col price">{{recentSale.sold_at | convertDateTime}}</div>
         </div>
